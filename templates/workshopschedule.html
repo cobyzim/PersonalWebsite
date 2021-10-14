@@ -1,0 +1,89 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Workshop schedule page with updated content that can be rendered using flask. -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Workshop Schedule
+{% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/webdefault.css') }}">
+{% endblock %}
+
+{% block header %}
+    Workshop Schedule Page
+{% endblock %}
+
+{% block content %}
+<div class="workbody">
+    <!-- table including columns for day, session, workshops, teacher, room, and time (used th for bold) -->
+    <table class="workshoptable">
+        <thead>
+            <tr>
+                <th scope="col"> Day </th>
+                <th scope="col"> Session </th>
+                <th scope="col"> Workshop Title </th>
+                <th scope="col"> Speaker </th>
+                <th scope="col"> Room </th>
+                <th scope="col"> Time </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Day 1 </td>
+                <td> Session 1 </td>
+                <td> Acoustic and Electric Guitar Anatomy, Picking Technique, and Fretting Hand Positioning.<br><br>
+                     Getting to Know the Structure of the Bass, Its Role in Music, and the Differences Between Using
+                     a Pick and Fingers.<br><br>Fundamental Drum Setup, Timing, and the Importance of Maintaining Tempo.
+                    </td>
+                <td> Mr. Ross <br><br>
+                     Mrs. Freeland <br><br>
+                     Mrs. Lanegan <br></td>
+                <td> Room 1 <br><br>
+                     Room 2 <br><br>
+                     Room 3 <br></td>
+                <td> 1:00 p.m. - 3:30 p.m. <br><br>
+                     1:00 p.m. - 3:30 p.m. <br><br>
+                     1:00 p.m. - 3:30 p.m. <br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> Session 2 </td>
+                <td> Learning to Play Some Simple Chords, Riffs, and Tunes using Tablature.<br><br>
+                     Holding Down the Low End: How to Play Simple Bass Lines that Follow the Drum Beat.<br><br>
+                     Simple Drum Parts From Popular Songs to Get You Playing with Others as Soon as Possible<br>
+                </td>
+                <td> Mr. Ross <br><br>
+                     Mrs. Freeland <br><br>
+                     Mrs. Lanegan <br></td>
+                <td> Room 1 <br><br>
+                     Room 2 <br><br>
+                     Room 3 <br></td>
+                <td> 5:00 p.m. - 7:30 p.m. <br><br>
+                     5:00 p.m. - 7:30 p.m. <br><br>
+                     5:00 p.m. - 7:30 p.m. <br></td>
+            </tr>
+            <tr>
+                <td> Day 2 </td>
+                <td> Session 3 </td>
+                <td> Guitar Tips and Tricks with Tom Morello From Rage Against the Machine!<br><br>
+                     Improving your Bass Playing with Flea from the Red Hot Chili Peppers!<br><br>
+                     Getting Better at Your Drum Technique with Travis Barker from blink-182!<br>
+                </td>
+                <td> Mr. Ross <br><br>
+                     Mrs. Freeland <br><br>
+                     Mrs. Lanegan <br></td>
+                <td> Room 1 <br><br>
+                     Room 2 <br><br>
+                     Room 3 <br></td>
+                <td> 1:30 p.m. - 4:00 p.m. <br><br>
+                     1:30 p.m. - 4:00 p.m. <br><br>
+                     1:30 p.m. - 4:00 p.m. <br></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+/* Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: CSS page including all the CSS code that customizes different parts of the HTML*/
+
+/* gives border to awards table and customizes width */
+.awardTable {
+    width:200px;
+
+    border-collapse: collapse;
+}
+
+/* colors border blue and specifies the size and padding */
+.awardTable td{
+    padding:7px; border:#4e95f4 1px solid;
+}
+
+/* contributes to making sections stack in meals.html */
+.horizontalsection {
+    clear: both;
+}
+
+/* makes menus side by side columns on desktop */
+.menu {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+/* makes menus stack on mobile devices */
+@media  screen and (max-width: 480px) {
+    .menu {
+        margin: 1% 0 1% 0; width: 100%;
+    }
+}
+
+/* makes header take up 100% width in meal.html */
+.header {
+    width: 100%;
+}
+
+/* makes footer take up 100% width in meal.html */
+.footer {
+    width:100%;
+}
+
+/* contributes to making sections stack on keynote.html */
+.horizontalsectionkey {
+    clear: both;
+}
+
+/* makes keynote speakers appear in columns side by side on desktop */
+.keyspeaker {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+/* makes keynote speakers stack on mobile devices */
+@media  screen and (max-width: 480px) {
+    .keyspeaker {
+        margin: 1% 0 1% 0; width: 100%;
+    }
+}
+
+/* makes header take up 100% width in keynote.html */
+.headerkey {
+    width: 100%;
+}
+
+/* makes footer take up 100% width in keynote.html */
+.footerkey {
+    width: 100%;
+}
+
+/* makes text in body of workshop table align in center and gives it padding */
+.workbody {
+    padding: 14px;
+    text-align: center;
+}
+
+/* controls the width, margin, layout, and border of workshoptable */
+.workshoptable {
+    width:100%;
+    margin: 20px auto;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+/* makes td and th in workshoptable have borders too with padding (also makes it blue) */
+.workshoptable td, .workshoptable th {
+    padding:7px; border:#4e95f4 1px solid;
+    border-collapse: collapse;
+}
+
+/* makes the fieldsets in registration have background color when user attempts to enter something in.
+   also changes the color of the legends and gives them a background color */
+fieldset:hover {
+    background-color: firebrick;
+    font-weight: bold;
+}
+    legend {
+        background-color: slategrey;
+        color: white;
+    }

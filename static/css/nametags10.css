@@ -1,0 +1,50 @@
+/* css for left and right nametag divs and paragraphs*/
+.lefttagdiv {
+    display: block;
+    float: left;
+    width: 76mm;
+    height: 50mm;
+    border-style: solid;
+}
+.righttagdiv {
+    display: block;
+    float: left;
+    width: 76mm;
+    height: 50mm;
+    border-style: solid;
+}
+.name {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    color: green;
+}
+.position {
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+    color: red;
+}
+.company {
+    text-align: center;
+    font-size: 12pt;
+}
+.citstate {
+    text-align: center;
+    font-size: 12pt;
+}
+
+/* css for page div */
+.pagediv {
+    width: 8.5in;
+    height: 11in;
+}
+
+/* css for row divs */
+.rowdiv {
+    margin-top: 15mm;
+    margin-left: 30mm;
+    margin-right: 30mm;
+    margin-bottom: 15mm;
+    width: 100%;
+}

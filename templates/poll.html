@@ -1,0 +1,56 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Poll page with updated poll and message that is shown after user submits thanking them for voting-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Poll
+{% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/webdefault.css') }}">
+{% endblock %}
+
+{% block header %}
+    Poll
+{% endblock %}
+
+{% block content %}
+    <h2>{{ message }}</h2>
+
+    <!-- Fieldset including three radio buttons for people to choose their favorite award nominee. -->
+    <form id="poll" name="favartist" method="POST" onsubmit="chosenAwardWinner()" onload="displayVoteTotals()">
+
+        <fieldset>
+            <legend>Vote For Your Favorite Singer!</legend>
+
+            <label for="nom1">Kurt Cobain!</label>
+            <input id="nom1" name="noms" type="radio" value="Kurt Cobain!">
+            <div>
+                <p id="nominee1"></p>
+            </div>
+
+            <label for="nom2">James Hetfield!</label>
+            <input id="nom2" name="noms" type="radio" value="James Hetfield!">
+            <div>
+                <p id="nominee2"></p>
+            </div>
+
+            <label for="nom3">Chris Cornell!</label>
+            <input id="nom3" name="noms" type="radio" value="Chris Cornell!">
+            <div>
+                <p id="nominee3"></p>
+            </div>
+
+        </fieldset>
+
+    <button type="submit" id="submitbttnpoll">Submit</button>
+
+    </form>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

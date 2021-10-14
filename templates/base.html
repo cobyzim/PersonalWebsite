@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Base page used as outline for other 8 pages. In other words, the templates extend this page -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Base page to be used for the other 8 pages">
+    <meta name="keywords" content="">
+    <meta name="author" content="Coby Zimmerman">
+    <meta name="robots" content="noindex">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Used for CSS -->
+    {% block links %}{% endblock %}
+
+</head>
+
+<body>
+<header>
+    <h1>{% block header %}{% endblock %}</h1>
+    <!-- Links to the other pages -->
+    <nav>
+        {% block nav %}
+            {% include 'nav.html' %}
+        {% endblock %}
+    </nav>
+</header>
+
+<main>
+
+    {% block content %}{% endblock %}
+
+</main>
+
+<footer>
+    <!-- address with fake address, phone number, and email -->
+    <address>
+        <small>
+
+            1155 Derek Drive.
+            Limerick, NY 13657 /
+            202-555-0191 /
+            j.rentor69@gmail.com
+
+        </small>
+    </address>
+    <!-- Disclaimer -->
+    <p>
+        <small>
+            While this web site was created to satisfy the requirement of building
+            a web site for an academic course at Regis University, the views and
+            opinions expressed on this web site are solely those of the original
+            author and do not necessarily represent the views and opinions of
+            Regis University.
+        </small>
+    </p>
+
+</footer>
+
+{% block script %}{% endblock %}
+
+</body>
+
+</html>

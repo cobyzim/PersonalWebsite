@@ -1,0 +1,43 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Keynote page that shows guest speakers that will appear at the conference. Includes updated image
+     formats that fit with flask-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Keynote
+{% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/webdefault.css') }}">
+{% endblock %}
+
+{% block header %}
+    Keynote Page
+{% endblock %}
+
+{% block content %}
+    <!-- div elements for two keynote speakers to make them stack on mobile platforms -->
+    <div class="horizontalsectionkey">
+        <div class="keyspeaker"><img src="{{ url_for('static', filename='images/jack-black.jpg') }}" width="320"
+                                     height="320" alt="Jack Black"><br>
+            <h1>Jack Black</h1>
+
+            <p>Jack Black is an actor and the lead singer of the band Tenacious D. He will be speaking about what it
+            is like to travel the world in a famous rock band and why he gravitated towards the guitar.</p>
+        </div>
+
+        <div class="keyspeaker"><img src="{{ url_for('static', filename='images/josh-homme.jpg') }}" width="320"
+                                     height="320" alt="Josh Homme"><br>
+            <h1>Josh Homme</h1>
+
+            <p>Josh Homme is a singer/songwriter and multi-instrumentalist best known for his work with the band
+            Queens of the Stone Age. He will be speaking about the importance of hard work and practice when it
+            comes to playing an instrument as well as how you shouldn't expect to get anything material out of
+            making music. He is a big believer in that you have to make music you like, not because you think others
+            will enjoy it.</p>
+        </div>
+    </div>
+{% endblock %}

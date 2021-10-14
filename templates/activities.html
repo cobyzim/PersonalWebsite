@@ -1,0 +1,26 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Activities page with activities users can take advantage of outside of the conference-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Activities
+{% endblock %}
+
+{% block header %}
+    Activities Page
+{% endblock %}
+
+{% block content %}
+    <!-- List of activities and a video of one of them -->
+    <p>Here is a list of some things you can do outside of the conference</p>
+    <ul>
+        <li>Recreational Center</li>
+        <li>Golf Course</li>
+        <li>Rock and Roll Concert Venue</li>
+    </ul>
+    <iframe width="748" height="421" src="https://www.youtube.com/embed/d0kkJLqnJAk" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endblock %}

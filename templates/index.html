@@ -1,0 +1,32 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Index page containing information that prefaces what the conference will be about and when it will
+     occur.-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block header %}
+    Index Page
+{% endblock %}
+
+{% block content %}
+    <!-- Paragraph about conference, date, and image-->
+    <p>
+        This conference is for individuals like myself that are novice musicians looking for ways to improve their
+        playing techniques on instruments including the guitar, bass, and drums. During each of our three workshop time
+        slots, there will be a guitar, bass, and drum specific workshop that one may choose to attend. The first
+        timeslot will have more foundational and basic workshops, the second will be more of an intermediate level that
+        builds on the first, and the third and final timeslot will feature special guests including Tom Morello, Flea,
+        and Travis Barker! We look forward to seeing all of you there!
+    </p>
+    <p>
+        April 7th, 2021
+    </p>
+
+    <img src="{{ url_for('static', filename='images/bass-drums-guitar.jpg') }}" alt="Bass,Drums,Guitar">
+{% endblock %}

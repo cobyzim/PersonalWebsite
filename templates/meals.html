@@ -1,0 +1,56 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Meals page that shows meal options for the conference. Includes updated image formats to fit with
+     flask. -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Meals
+{% endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/webdefault.css') }}">
+{% endblock %}
+
+{% block header %}
+    Food Options
+{% endblock %}
+
+{% block content %}
+    <!-- div elements for the two different menus allowing css file to make them stack on mobile -->
+    <div class="horizontalsection">
+        <div class="menu"><img src="{{ url_for('static', filename='images/menuOne.jpg') }}" width="300" height="300"
+                               alt="Menu One"><br>
+            <h1>Menu Day 1</h1>
+
+            <p>Breakfast
+            <br>Rolls, Fruit, Coffee</p>
+
+            <p>Lunch
+            <br>Sandwiches, Tea, Water</p>
+
+            <p>Dinner
+            <br>Steak, Salad, Wine</p>
+        </div>
+
+        <div class="menu"><img src="{{ url_for('static', filename='images/menuOne.jpg') }}" width="300" height="300"
+                               alt="Menu Two"><br>
+            <h1>Menu Day 2</h1>
+
+            <p>Breakfast
+            <br>Rolls, Fruit, Coffee</p>
+
+            <p>Lunch
+            <br>Sandwiches, Tea, Water</p>
+
+            <p>Dinner
+            <br>Fish, Salad, Wine</p>
+        </div>
+
+
+    <p>Full Meal Package: $250.00 (includes Dinner Day 2)
+    <br>Dinner Day 2: $75.00</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!-- Name: Coby Zimmerman
+     Date: 11/2/20
+     Assignment: CS336 Assignment #8
+     Description: Awards page with updated poll and message that is shown after user submits thanking them for voting-->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Awards
+{%  endblock %}
+
+{% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/webdefault.css') }}">
+{% endblock %}
+
+{% block header %}
+    Awards Page
+{% endblock %}
+
+{% block content %}
+    <h2>{{ message }}</h2>
+
+    <!-- Table containing images, titles, and descriptions of the awards -->
+    <form id="awardspoll" name="favartists" method="POST" onsubmit="chosenAwardWinner()" onload="displayVoteTotals()">
+
+        <fieldset>
+            <legend>Vote For Your Favorite Instrument!</legend>
+
+            <label for="nom1">Guitar!</label>
+            <input id="nom1" name="noms" type="radio" value="Guitar!">
+            <div>
+                <p id="nominee1"></p>
+            </div>
+
+            <label for="nom2">Bass!</label>
+            <input id="nom2" name="noms" type="radio" value="Bass!">
+            <div>
+                <p id="nominee2"></p>
+            </div>
+
+            <label for="nom3">Drums!</label>
+            <input id="nom3" name="noms" type="radio" value="Drums!">
+            <div>
+                <p id="nominee3"></p>
+            </div>
+
+        </fieldset>
+
+    <button type="submit" id="awardssubmitbttnpoll">Submit</button>
+
+    </form>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
